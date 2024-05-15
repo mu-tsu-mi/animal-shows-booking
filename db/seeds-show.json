@@ -1,6 +1,27 @@
 [
     {
         "name": "Dancing Pigmy Hippos",
-        "location": "Africa"
+        "location": "African Animals",
+        "description": "Pigmy hippos are fun-loving animals. Let's dance along with pigmy hippos!"
+    },
+    {
+        "name": "Cold Blooded Hunting Show",
+        "location": "Animals in Cold Region",
+        "description": "Beautiful but ruthless snow leopard. Let's see how they catch today's dinner."
+    },
+    {
+        "name": "Kakaka! Singing Time",
+        "location": "Australian Animals",
+        "description": "Fun singing time with kookaburras!"
+    },
+    {
+        "name": "A day of Mountain Goats",
+        "location": "Mountain Animals",
+        "description": "Have you been to a mountain? Have you seen these agile furry animal? Join us to learn about moutain goats."
+    },
+    {
+        "name": "Dive Into Platypus School",
+        "location": "Acqatic Animals",
+        "description": "How much do you know about this shy and nocturnal animal? Let's learn how platypus lives."
     }
 ]

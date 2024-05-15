@@ -3,6 +3,8 @@ require('./database');
 
 const Animal = require('../models/animal');
 const animalSeedData = require('./seeds-animal.json');
+const Show = require('../models/show')
+const showSeedData = require('./seeds-show.json');
 
 Animal.deleteMany({})
 	.then(() => {
@@ -13,3 +15,13 @@ Animal.deleteMany({})
 	})
 	.catch(console.error)
 	.finally(() => process.exit());
+
+Show.deleteMany({})
+    .then(() => {
+        return Show.insertMany(showSeedData);
+    })
+    .then((shows) => {
+        console.log('Inserted shows: ', shows)
+    })
+    .catch(console.error)
+    .finally(() => process.exit());

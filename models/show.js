@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 const showSchema = new Schema({
     name: String,
     location: String,
+    description: String,
     animal: {
       type: Schema.Types.ObjectId,
       ref: 'Animal'
