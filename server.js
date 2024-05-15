@@ -8,8 +8,8 @@ require('dotenv').config()
 require('./db/database')
 
 var indexRouter = require('./routes/index');
-const zoneRouter = require('./routes/zone')
-var usersRouter = require('./routes/users');
+const zonesRouter = require('./routes/zones')
+var animalsRouter = require('./routes/animals');
 
 var app = express();
 
@@ -25,8 +25,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
 
 app.use('/', indexRouter);
-app.use('/zone', zoneRouter)
-app.use('/users', usersRouter);
+app.use('/zones', zonesRouter)
+app.use('/zones/:id', animalsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

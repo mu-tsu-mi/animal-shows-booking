@@ -3,7 +3,7 @@ var router = express.Router();
 
 
 router.get('/', function(req, res, next) {
-  res.render('zone');
+  res.render('./animal-zones/zones');
 });
 
 module.exports = router;
