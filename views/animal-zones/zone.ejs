@@ -1,6 +1,10 @@
 <%- include('../partials/header') %>
     <h1><%= zone %></h1>
-    <div><a><%= zone %></a></div>
-    
-    
+    <div>
+        <% animals.forEach(function(a){ %>
+            <div><a href="<%=`/zones/${zone}/${a.name}`%>">
+                <%= a.name %>
+            </a></div>
+        <% }) %>
+    </div>    
 <%- include('../partials/footer') %>
