@@ -1,6 +1,62 @@
 [
     {
         "name": "Pigmy Hippo",
-        "zone": "Africa"
+        "zone": "African Animals"
+    },
+    {
+        "name": "African Bush Elephant",
+        "zone": "African Animals"
+    },
+    {
+        "name": "Plains Zebra",
+        "zone": "African Animals"
+    },
+    {
+        "name": "Laughing Kookaburra",
+        "zone": "Australian Animals"
+    },
+    {
+        "name": "Common Wombat",
+        "zone": "Australian Animals"
+    },
+    {
+        "name": "Bilbies",
+        "zone": "Australian Animals"
+    },
+    {
+        "name": "",
+        "zone": "Mountain Animals"
+    },
+    {
+        "name": "",
+        "zone": "Mountain Animals"
+    },
+    {
+        "name": "",
+        "zone": "Mountain Animals"
+    },
+    {
+        "name": "",
+        "zone": "Acqatic Animals"
+    },
+    {
+        "name": "",
+        "zone": "Acqatic Animals"
+    },
+    {
+        "name": "",
+        "zone": "Acqatic Animals"
+    },
+    {
+        "name": "",
+        "zone": "Animals in Cold Region"
+    },
+    {
+        "name": "",
+        "zone": "Animals in Cold Region"
+    },
+    {
+        "name": "",
+        "zone": "Animals in Cold Region"
     }
 ]

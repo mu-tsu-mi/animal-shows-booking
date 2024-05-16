@@ -6,22 +6,14 @@ const animalSeedData = require('./seeds-animal.json');
 const Show = require('../models/show')
 const showSeedData = require('./seeds-show.json');
 
-Animal.deleteMany({})
-	.then(() => {
-		return Animal.insertMany(animalSeedData);
-	})
-	.then((animals) => {
-		console.log('Inserted animals', animals);
-	})
-	.catch(console.error)
-	.finally(() => process.exit());
+(async function() {
+    await Animal.deleteMany({})
+    const animals = await Animal.insertMany(animalSeedData);
+    console.log('Inserted animals', animals);
 
-Show.deleteMany({})
-    .then(() => {
-        return Show.insertMany(showSeedData);
-    })
-    .then((shows) => {
-        console.log('Inserted shows: ', shows)
-    })
-    .catch(console.error)
-    .finally(() => process.exit());
+    await Show.deleteMany({})
+    const shows = await Show.insertMany(showSeedData);
+    console.log('Inserted shows', shows);
+    
+    process.exit();
+})();
