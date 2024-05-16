@@ -20,11 +20,11 @@ As a user, I want to see a list of zoo zones, those of which have a list of anim
 - [ ] Booking - Create /Individual animal page
 - [ ] Booking - Edit
 - [ ] Booking - Delete
-- [ ]Add animal images
-- [ ]Add user's booking details on landing page
+- [ ] Add animal images
+- [ ] Add user's booking details on landing page
 - [ ] Sort booking details by latest on top
-- [ ]css
-- [ ]Add API
+- [ ] css
+- [ ] Add API
 
 # Next Steps
 

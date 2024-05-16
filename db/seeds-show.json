@@ -2,12 +2,14 @@
     {
         "name": "Dancing Pigmy Hippos",
         "location": "African Animals",
-        "description": "Pigmy hippos are fun-loving animals. Let's dance along with pigmy hippos!"
+        "description": "Pigmy hippos are fun-loving animals. Let's dance along with pigmy hippos!",
+        "_animal": "Pigmy Hippo"
     },
     {
         "name": "Elephant the Artist",
         "location": "African Animals",
-        "description": "Which colour matches her feeling today? Elephant the artist takes her heart out in her painting."
+        "description": "Which colour matches her feeling today? Elephant the artist takes her heart out in her painting.",
+        "_animal": "African Bush Elephant"
     },
     {
         "name": "Zebra Parade",

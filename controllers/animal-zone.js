@@ -16,8 +16,8 @@ async function show(req, res) {
 }
 
 async function showDetail(req, res) {
-    console.log(req.params.name)
-    const animal = req.params.name
-    console.log(animal)
-    res.render('./animal-zones/animal', { animal })
+    const name = req.params.name
+    const animal = await Animal.findOne({ name }).exec();
+    const shows = await Show.find({ 'animal': animal._id }).exec();
+    res.render('./animal-zones/animal', { animal, shows })
 }

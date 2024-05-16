@@ -9,11 +9,18 @@ const showSeedData = require('./seeds-show.json');
 (async function() {
     await Animal.deleteMany({})
     const animals = await Animal.insertMany(animalSeedData);
-    console.log('Inserted animals', animals);
 
     await Show.deleteMany({})
     const shows = await Show.insertMany(showSeedData);
-    console.log('Inserted shows', shows);
     
+    for (const showSeed of showSeedData) {
+        if (showSeed._animal) {
+            const animal = await Animal.findOne({name: showSeed._animal}).exec()
+            const show = await Show.findOne({name: showSeed.name}).exec()
+            show.animal = animal
+            await show.save()
+        }
+    }
+
     process.exit();
 })();

@@ -1,5 +1,12 @@
 <%- include('../partials/header') %>
-    <h1><%= animal %></h1>
+    <h1><%= animal.name %></h1>
+    <div>
+        <% shows.forEach(function(show){ %>
+            <div>
+                <%= show.name %>
+            </div>
+        <% }) %>
+    </div>
     
     
     
