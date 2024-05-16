@@ -50,14 +50,14 @@
         "description": "How much do you know about this shy and nocturnal animal? Let's learn how platypus lives."
     },
     {
-        "name": "",
+        "name": "I am the strongest!",
         "location": "Aquatic Animals",
-        "description": "."
+        "description": "The heaviest of its kind, emperor penguins are now playing Sumo wrestling to decide the strongest."
     },
     {
-        "name": "",
+        "name": "It's a Small World in the Sea",
         "location": "Aquatic Animals",
-        "description": "s."
+        "description": "Have a peak in a minituare stage for the smallest seahorses."
     },
     {
         "name": "Cold Blooded Hunting Show",
@@ -65,13 +65,13 @@
         "description": "Beautiful but ruthless snow leopard. Let's see how they catch today's dinner."
     },
     {
-        "name": "",
+        "name": "Philosopher's Sketch",
         "location": "Animals in Cold Region",
-        "description": "."
+        "description": "Come and look at this furry dog's mind expression in one stroke sketch."
     },
     {
-        "name": "",
+        "name": "Treasure Hunt in the White World",
         "location": "Animals in Cold Region",
-        "description": "r."
+        "description": "Snow Owls are so good at hunting. Come and see to find out more about thier nature."
     }
 ]

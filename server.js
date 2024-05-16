@@ -9,7 +9,7 @@ require('./db/database')
 
 var indexRouter = require('./routes/index');
 const zonesRouter = require('./routes/zones')
-var animalsRouter = require('./routes/animals');
+// var animalsRouter = require('./routes/animals');
 
 var app = express();
 
@@ -26,7 +26,7 @@ app.use(methodOverride('_method'));
 
 app.use('/', indexRouter);
 app.use('/zones', zonesRouter)
-app.use('/zones/:id', animalsRouter);
+// app.use('/zones/:id', animalsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

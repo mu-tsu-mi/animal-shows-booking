@@ -1,62 +1,62 @@
 [
     {
         "name": "Pigmy Hippo",
-        "zone": "African Animals"
+        "zone": "african-animals"
     },
     {
         "name": "African Bush Elephant",
-        "zone": "African Animals"
+        "zone": "african-animals"
     },
     {
         "name": "Plains Zebra",
-        "zone": "African Animals"
+        "zone": "african-animals"
     },
     {
         "name": "Laughing Kookaburra",
-        "zone": "Australian Animals"
+        "zone": "australian-animals"
     },
     {
         "name": "Common Wombat",
-        "zone": "Australian Animals"
+        "zone": "australian-animals"
     },
     {
         "name": "Bilbies",
-        "zone": "Australian Animals"
+        "zone": "australian-animals"
     },
     {
-        "name": "",
-        "zone": "Mountain Animals"
+        "name": "Mountain Goat",
+        "zone": "mountain-animals"
     },
     {
-        "name": "",
-        "zone": "Mountain Animals"
+        "name": "Japanese Boar",
+        "zone": "mountain-animals"
     },
     {
-        "name": "",
-        "zone": "Mountain Animals"
+        "name": "Red Panda",
+        "zone": "mountain-animals"
     },
     {
-        "name": "",
-        "zone": "Acqatic Animals"
+        "name": "Platypus",
+        "zone": "aquatic-animals"
     },
     {
-        "name": "",
-        "zone": "Acqatic Animals"
+        "name": "Emperor Penguin",
+        "zone": "aquatic-animals"
     },
     {
-        "name": "",
-        "zone": "Acqatic Animals"
+        "name": "Pygmy Seahorse",
+        "zone": "aquatic-animals"
     },
     {
-        "name": "",
-        "zone": "Animals in Cold Region"
+        "name": "Snow Leopard",
+        "zone": "animals-in-cold-region"
     },
     {
-        "name": "",
-        "zone": "Animals in Cold Region"
+        "name": "Akita Inu",
+        "zone": "animals-in-cold-region"
     },
     {
-        "name": "",
-        "zone": "Animals in Cold Region"
+        "name": "Snowy Owl",
+        "zone": "animals-in-cold-region"
     }
 ]

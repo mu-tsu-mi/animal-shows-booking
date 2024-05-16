@@ -12,16 +12,19 @@ As a user, I want to see a list of zoo zones, those of which have a list of anim
 - MongoDB and Mongoose
 
 # Getting Started
-Wireframe and Trello board
-Create schemas
-Zones (tiles)
-Lists of animal shows (tiles)
-Add authentication feature
-Booking - Individual animal page
-Add animal images
-Add user's booking details on landing page
-css
-Add API
+- [X] Wireframe and Trello board
+- [W] Create schemas
+- [W] Zones (tiles)
+- [W] Lists of animal shows (tiles)
+- [ ] Add authentication feature
+- [ ] Booking - Create /Individual animal page
+- [ ] Booking - Edit
+- [ ] Booking - Delete
+- [ ]Add animal images
+- [ ]Add user's booking details on landing page
+- [ ] Sort booking details by latest on top
+- [ ]css
+- [ ]Add API
 
 # Next Steps
 
