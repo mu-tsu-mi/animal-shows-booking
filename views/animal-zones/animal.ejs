@@ -1,12 +1,15 @@
 <%- include('../partials/header') %>
     <h1><%= animal.name %></h1>
     <img src="<%= `/images/animals/${animal.name}.png` %>"/>
+   
     <div>
+        <% if(shows.length > 0) { %>
         <% shows.forEach(function(show){ %>
-            <div>
-                <%= show.name %>
+            <div id="show-name">
+                <a href="<%=`/zones/${zone}/${animal.name}/${show.name}`%>"><%= show.name %></a>
             </div>
         <% }) %>
+        <% } %>
     </div>
     
     
