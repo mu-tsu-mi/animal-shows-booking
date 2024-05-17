@@ -1,62 +1,62 @@
 [
     {
         "name": "Pigmy Hippo",
-        "zone": "african-animals"
+        "zone": "African Animals"
     },
     {
         "name": "African Bush Elephant",
-        "zone": "african-animals"
+        "zone": "African Animals"
     },
     {
         "name": "Plains Zebra",
-        "zone": "african-animals"
+        "zone": "African Animals"
     },
     {
         "name": "Laughing Kookaburra",
-        "zone": "australian-animals"
+        "zone": "Australian Animals"
     },
     {
         "name": "Common Wombat",
-        "zone": "australian-animals"
+        "zone": "Australian Animals"
     },
     {
         "name": "Bilbies",
-        "zone": "australian-animals"
+        "zone": "Australian Animals"
     },
     {
         "name": "Mountain Goat",
-        "zone": "mountain-animals"
+        "zone": "Mountain Animals"
     },
     {
         "name": "Japanese Boar",
-        "zone": "mountain-animals"
+        "zone": "Mountain Animals"
     },
     {
         "name": "Red Panda",
-        "zone": "mountain-animals"
+        "zone": "Mountain Animals"
     },
     {
         "name": "Platypus",
-        "zone": "aquatic-animals"
+        "zone": "Aquatic Animals"
     },
     {
         "name": "Emperor Penguin",
-        "zone": "aquatic-animals"
+        "zone": "Aquatic Animals"
     },
     {
         "name": "Pygmy Seahorse",
-        "zone": "aquatic-animals"
+        "zone": "Aquatic Animals"
     },
     {
         "name": "Snow Leopard",
-        "zone": "animals-in-cold-region"
+        "zone": "Animals in Cold Region"
     },
     {
         "name": "Akita Inu",
-        "zone": "animals-in-cold-region"
+        "zone": "Animals in Cold Region"
     },
     {
         "name": "Snowy Owl",
-        "zone": "animals-in-cold-region"
+        "zone": "Animals in Cold Region"
     }
 ]

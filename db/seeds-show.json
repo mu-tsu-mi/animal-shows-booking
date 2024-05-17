@@ -14,66 +14,79 @@
     {
         "name": "Zebra Parade",
         "location": "African Animals",
-        "description": "Be amazed by beautiful zebras marching in front of you!"
+        "description": "Be amazed by beautiful zebras marching in front of you!",
+        "_animal": "Plains Zebra"
     },
     {
         "name": "Kakaka! Singing Time",
         "location": "Australian Animals",
-        "description": "Fun singing time with kookaburras!"
+        "description": "Fun singing time with kookaburras!",
+        "_animal": "Laughing Kookaburra"
     },
     {
         "name": "Wombat Family",
         "location": "Australian Animals",
-        "description": "Join us to cuddle the baby wombat or feed the family of wombats."
+        "description": "Join us to cuddle the baby wombat or feed the family of wombats.",
+        "_animal": "Common Wombat"
     },
     {
         "name": "Dark Samll Wonderland with Bilbies",
         "location": "Australian Animals",
-        "description": "Which bilby will reach the goal in the maze first?"
+        "description": "Which bilby will reach the goal in the maze first?",
+        "_animal": "Bilbies"
     },
     {
         "name": "A day of Mountain Goat",
         "location": "Mountain Animals",
-        "description": "Have you been to a mountain? Have you seen these agile furry animal? Join us to learn about moutain goats."
+        "description": "Have you been to a mountain? Have you seen these agile furry animal? Join us to learn about moutain goats.",
+        "_animal": "Mountain Goat"
     },
     {
         "name": "Run run run Uribous!",
         "location": "Mountain Animals",
-        "description": "Piglets of Japanese boars(uribous) are racing for the prize of sweet potato!"
+        "description": "Piglets of Japanese boars(uribous) are racing for the prize of sweet potato!",
+        "_animal": "Japanese Boar"
     },
     {
         "name": "Fruits Picking Time",
         "location": "Mountain Animals",
-        "description": "Our red pandas are ready to pick fruits. Will they ask you to feed them?"
+        "description": "Our red pandas are ready to pick fruits. Will they ask you to feed them?",
+        "_animal": "Red Panda"
     },
     {
         "name": "Dive Into Platypus School",
         "location": "Aquatic Animals",
-        "description": "How much do you know about this shy and nocturnal animal? Let's learn how platypus lives."
+        "description": "How much do you know about this shy and nocturnal animal? Let's learn how platypus lives.",
+        "_animal": "Platypus"
     },
     {
         "name": "I am the strongest!",
         "location": "Aquatic Animals",
-        "description": "The heaviest of its kind, emperor penguins are now playing Sumo wrestling to decide the strongest."
+        "description": "The heaviest of its kind, emperor penguins are now playing Sumo wrestling to decide the strongest.",
+        "_animal": "Emperor Penguin"
     },
     {
         "name": "It's a Small World in the Sea",
         "location": "Aquatic Animals",
-        "description": "Have a peak in a minituare stage for the smallest seahorses."
+        "description": "Have a peak in a minituare stage for the smallest seahorses.",
+        "_animal": "Pygmy Seahorse"
     },
     {
         "name": "Cold Blooded Hunting Show",
         "location": "Animals in Cold Region",
-        "description": "Beautiful but ruthless snow leopard. Let's see how they catch today's dinner."
+        "description": "Beautiful but ruthless snow leopard. Let's see how they catch today's dinner.",
+        "_animal": "Snow Leopard"
     },
     {
         "name": "Philosopher's Sketch",
         "location": "Animals in Cold Region",
-        "description": "Come and look at this furry dog's mind expression in one stroke sketch."
+        "description": "Come and look at this furry dog's mind expression in one stroke sketch.",
+        "_animal": "Akita Inu"
     },
     {
         "name": "Treasure Hunt in the White World",
         "location": "Animals in Cold Region",
-        "description": "Snow Owls are so good at hunting. Come and see to find out more about thier nature."
+        "description": "Snowy owls are so good at hunting. Come and see to find out more about thier nature.",
+        "_animal": "Snowy Owl"
     }
 ]
