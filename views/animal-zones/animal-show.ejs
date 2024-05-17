@@ -1,6 +1,10 @@
 <%- include('../partials/header') %>
-    <h1><%= show %></h1>
-    <h2>Book this show</h2>
+    <h1><%= show.name %></h1>
+    <h2>About this show</h2>
+    <div>
+        <%= show.description %>
+    </div>
+    <h3>Book this show</h3>
    
     
 <%- include('../partials/footer') %>

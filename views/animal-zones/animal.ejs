@@ -5,7 +5,7 @@
     <div>
         <% if(shows.length > 0) { %>
         <% shows.forEach(function(show){ %>
-            <div id="show-name">
+            <div id="show-name"><p>We are on this show. Click below for show details and booking: </p>
                 <a href="<%=`/zones/${zone}/${animal.name}/${show.name}`%>"><%= show.name %></a>
             </div>
         <% }) %>
