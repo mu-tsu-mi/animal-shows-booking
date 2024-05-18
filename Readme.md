@@ -13,11 +13,11 @@ As a user, I want to see a list of zoo zones, those of which have a list of anim
 
 # Getting Started
 - [X] Wireframe and Trello board
-- [W] Create schemas
+- [X] Create schemas
 - [W] Zones (tiles)
 - [W] Lists of animal shows (tiles)
-- [ ] Add authentication feature
-- [ ] Booking - Create /Individual animal page
+- [X] Add authentication feature
+- [W] Booking - Create /Individual animal page
 - [ ] Booking - Edit
 - [ ] Booking - Delete
 - [X] Add animal images

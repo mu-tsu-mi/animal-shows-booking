@@ -4,9 +4,15 @@ const Schema = mongoose.Schema;
 const bookingSchema = new Schema({
     numberOfAdults: Number,
     numberOfChildren: Number,
-    animalShow: [{
+    animalShow: {
         type: Schema.Types.ObjectId,
-        ref: 'Show'
+        ref: 'Show',
+        required: true
+    },
+    user: [{
+        type: Schema.Types.ObjectId,
+        ref: 'User',
+        required: true
     }]
     }, {
         timestamps: true

@@ -8,9 +8,9 @@ const userSchema = new Schema({
         required: true
     },
     email: String,
-    bookingId: [{
+    bookings: [{
         type: Schema.Types.ObjectId,
-        ref: 'Booking'
+        ref: 'Booking',
     }]
 }, { timestamps: true });
 
