@@ -5,7 +5,7 @@
         <div>Booking <%= index + 1 %></div>
         <div>
             Show Name: 
-            <%= b.animalShow.name %>
+            <a href="/zones/<%= b.animalShow.zone %>/<%= b.animalShow.animal.name %>/<%= b.animalShow.name %>"><%= b.animalShow.name %></a>
         </div>
         <div>
             Show Date: 
