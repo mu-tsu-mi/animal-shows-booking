@@ -19,9 +19,14 @@
             Number of Children: 
             <%= b.numberOfChildren %>
         </div>
-        <button type="submit">
-            <a href="/bookings/<%= b._id %>/edit">Change details</a>
-        </button>
+        <div>
+            <button type="submit">
+                <a href="/bookings/<%= b._id %>/edit">Change details</a>
+            </button>
+        </div>
+        <form action="/bookings/<%= b._id %>?_method=DELETE" method="POST">
+            <button type="submit">Delete</button>
+        </form>
     <% }) %>
 <% } %>
 <%- include('../partials/footer') %>

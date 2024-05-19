@@ -3,7 +3,8 @@ const Booking = require('../models/booking');
 module.exports = {
     showBookings,
     showBookingEdit,
-    saveBookingChange
+    saveBookingChange,
+    deleteBooking
 }
 
 async function showBookings(req, res) {
@@ -27,5 +28,10 @@ async function saveBookingChange(req, res) {
     booking.numberOfAdults = req.body.numberOfAdults
     booking.numberOfChildren = req.body.numberOfChildren
     await booking.save()
+    res.redirect('/bookings')
+}
+
+async function deleteBooking(req, res) {
+    await Booking.deleteOne({ _id: req.params.id })
     res.redirect('/bookings')
 }
