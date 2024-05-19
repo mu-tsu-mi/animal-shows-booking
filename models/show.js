@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const showSchema = new Schema({
     name: String,
-    location: String,
+    zone: String,
     description: String,
     animal: {
       type: Schema.Types.ObjectId,

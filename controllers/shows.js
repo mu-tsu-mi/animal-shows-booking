@@ -1,25 +1,28 @@
-const Animal = require('../models/animal');
 const Show = require('../models/show')
+const Booking = require('../models/booking')
 
 module.exports = {
     showAnimalShow,
-    book
+    bookAnimalShow
 }
 
 async function showAnimalShow(req, res) {
     const animalShow = req.params.animalShowName
-    const show = await Show.findOne({ name: animalShow}).exec();
+    const show = await Show.findOne({ name: animalShow}).populate('animal').exec();
     res.render('./animal-zones/animal-show', { show })
 }
 
-async function book(req, res) {
-
+async function bookAnimalShow(req, res) {
+    const animalShow = req.params.animalShowName
+    const show = await Show.findOne({ name: animalShow}).populate('animal').exec();
     try {
-        console.log(req.body)
-        await Show.create(req.body)
-        res.redirect('/zones/:zone/:name/:animalShowName')
+        const newBooking = req.body
+        newBooking.animalShow = show
+        newBooking.user = req.user
+        await Booking.create(newBooking)
+        res.redirect(`/zones/${show.zone}/${show.animal.name}/${show.name}`)
     } catch(err) {
         console.log(err)
-        res.render('/zones/:zone/:name/:animalShowName', { errorMsg: err.message })
+        res.redirect(`/zones/${show.zone}/${show.animal.name}/${show.name}`, { errorMsg: err.message })
     }
 }

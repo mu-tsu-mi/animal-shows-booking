@@ -6,8 +6,25 @@
     </div>
     <% if(user) { %>
         <h3>Book this show</h3>
+        <form action="/zones/<%= show.zone %>/<%= show.animal.name %>/<%= show.name %>" method="POST">
+            <div>
+            <label>Pick a show date
+                <input type="date" name="showDate" required>
+            </label>
+            </div>
+            <div>
+            <label>Select number of adults
+                <input type="number" name="numberOfAdults" min="1" max="5" value="1" required>
+            </label>
+            </div>
+            <div>
+            <label>Select number of children
+                <input type="number" name="numberOfChildren" min="0" max="5" value="0" required>
+            </label>
+            </div>
+            <button type="submit">Book</button>
+        </form>
     <% } else { %>
         <h3>Please log in to make your booking</h3>
-        
     <% } %>
 <%- include('../partials/footer') %>

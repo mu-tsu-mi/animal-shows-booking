@@ -2,20 +2,30 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const bookingSchema = new Schema({
-    numberOfAdults: Number,
-    numberOfChildren: Number,
+    showDate: { 
+        type: Date,
+        required: true
+    },
+    numberOfAdults: {
+        type: Number,
+        required: true
+    },
+    numberOfChildren: {
+        type: Number,
+        required: true
+    },
     animalShow: {
         type: Schema.Types.ObjectId,
         ref: 'Show',
         required: true
     },
-    user: [{
+    user: {
         type: Schema.Types.ObjectId,
         ref: 'User',
         required: true
-    }]
+    },
     }, {
         timestamps: true
     });
 
-moddule.exports = mongoose.model('Booking', bookingSchema)
+module.exports = mongoose.model('Booking', bookingSchema)
