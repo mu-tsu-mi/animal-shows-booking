@@ -5,6 +5,20 @@
         <%= show.description %>
     </div>
     <% if(user) { %>
+        <h3>Your Booking Details: </h3>
+        <% if(bookings.length > 0) { %>
+        <div>    
+        <% bookings.forEach(function(b) { %>
+            <div>
+            Date: <%= b.showDate.toLocaleDateString() %>
+            Adults: <%= b.numberOfAdults %>
+            Children: <%= b.numberOfChildren %>
+            </div>
+        <% }) %>
+        </div>
+        <% } else { %>
+            <div>No Booking made yet</div>
+        <% } %>
         <h3>Book this show</h3>
         <form action="/zones/<%= show.zone %>/<%= show.animal.name %>/<%= show.name %>" method="POST">
             <div>

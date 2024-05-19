@@ -9,7 +9,8 @@ module.exports = {
 async function showAnimalShow(req, res) {
     const animalShow = req.params.animalShowName
     const show = await Show.findOne({ name: animalShow}).populate('animal').exec();
-    res.render('./animal-zones/animal-show', { show })
+    const bookings = await Booking.find({ animalShow: show, user: req.user})
+    res.render('./animal-zones/animal-show', { show, bookings })
 }
 
 async function bookAnimalShow(req, res) {

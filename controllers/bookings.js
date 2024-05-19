@@ -1,11 +1,10 @@
 const Booking = require('../models/booking');
 
 module.exports = {
-    showBooking
+    showBookings
 }
 
-async function showBooking(req, res) {
+async function showBookings(req, res) {
     const bookings = await Booking.find({ user: req.user }).populate('animalShow').exec();
-    
     res.render('./bookings', { bookings })
 }

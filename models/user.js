@@ -7,11 +7,7 @@ const userSchema = new Schema({
         type: String,
         required: true
     },
-    email: String,
-    bookings: [{
-        type: Schema.Types.ObjectId,
-        ref: 'Booking',
-    }]
+    email: String
 }, { timestamps: true });
 
 module.exports = mongoose.model('User', userSchema)
