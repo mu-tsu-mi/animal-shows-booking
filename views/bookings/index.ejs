@@ -1,8 +1,8 @@
-<%- include('./partials/header') %>
+<%- include('../partials/header') %>
 <h1>Your Booking Details</h1>
 <% if(bookings.length > 0) { %>
     <% bookings.forEach(function(b, index) { %>
-        <div><%= index + 1 %></div>
+        <div>Booking <%= index + 1 %></div>
         <div>
             Show Name: 
             <%= b.animalShow.name %>
@@ -19,6 +19,9 @@
             Number of Children: 
             <%= b.numberOfChildren %>
         </div>
+        <button type="submit">
+            <a href="/bookings/<%= b._id %>/edit">Change details</a>
+        </button>
     <% }) %>
 <% } %>
-<%- include('./partials/footer') %>
+<%- include('../partials/footer') %>
