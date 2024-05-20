@@ -10,7 +10,7 @@
         <div>    
         <% bookings.forEach(function(b) { %>
             <div>
-            Date: <%= b.showDate.toLocaleDateString() %>
+            Date: <%= b.showDate.toLocaleDateString('en-au') %>
             Adults: <%= b.numberOfAdults %>
             Children: <%= b.numberOfChildren %>
             </div>
