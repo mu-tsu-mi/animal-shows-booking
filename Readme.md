@@ -15,16 +15,19 @@ As a user, I want to see a list of zoo zones, those of which have a list of anim
 - [X] Wireframe and Trello board
 - [X] Create schemas
 - [W] Zones (tiles)
-- [W] Lists of animal shows (tiles)
+- [X] Lists of animal shows (tiles)
 - [X] Add authentication feature
-- [W] Booking - Create /Individual animal page
-- [ ] Booking - Edit
-- [ ] Booking - Delete
+- [X] Booking - Create /Individual animal page
+- [X] Booking - Edit
+- [X] Booking - Delete
 - [X] Add animal images
 - [ ] Add user's booking details on landing page
 - [ ] Sort booking details by latest on top
+- [ ] Disable users not to book for the same show for the same day
+- [ ] Disable past dates booking
 - [ ] css
 - [ ] Add API
+- [ ] Restful routing
 
 # Next Steps
 

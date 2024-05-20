@@ -3,90 +3,105 @@
         "name": "Dancing Pigmy Hippos",
         "zone": "African Animals",
         "description": "Pigmy hippos are fun-loving animals. Let's dance along with pigmy hippos!",
-        "_animal": "Pigmy Hippo"
+        "_animal": "Pigmy Hippo",
+        "timeOfDay": "11:00 AM"
     },
     {
         "name": "Elephant the Artist",
         "zone": "African Animals",
         "description": "Which colour matches her feeling today? Elephant the artist takes her heart out in her painting.",
-        "_animal": "African Bush Elephant"
+        "_animal": "African Bush Elephant",
+        "timeOfDay": "1:30 PM"
     },
     {
         "name": "Zebra Parade",
         "zone": "African Animals",
         "description": "Be amazed by beautiful zebras marching in front of you!",
-        "_animal": "Plains Zebra"
+        "_animal": "Plains Zebra",
+        "timeOfDay": "3:00 PM"
     },
     {
         "name": "Kakaka! Singing Time",
         "zone": "Australian Animals",
         "description": "Fun singing time with kookaburras!",
-        "_animal": "Laughing Kookaburra"
+        "_animal": "Laughing Kookaburra",
+        "timeOfDay": "10:30 AM"
     },
     {
         "name": "Wombat Family",
         "zone": "Australian Animals",
         "description": "Join us to cuddle the baby wombat or feed the family of wombats.",
-        "_animal": "Common Wombat"
+        "_animal": "Common Wombat",
+        "timeOfDay": "11:30 AM"
     },
     {
         "name": "Dark Samll Wonderland with Bilbies",
         "zone": "Australian Animals",
         "description": "Which bilby will reach the goal in the maze first?",
-        "_animal": "Bilbies"
+        "_animal": "Bilbies",
+        "timeOfDay": "4:00 PM"
     },
     {
         "name": "A day of Mountain Goat",
         "zone": "Mountain Animals",
         "description": "Have you been to a mountain? Have you seen these agile furry animal? Join us to learn about moutain goats.",
-        "_animal": "Mountain Goat"
+        "_animal": "Mountain Goat",
+        "timeOfDay": "11:00 AM"
     },
     {
         "name": "Run run run Uribous!",
         "zone": "Mountain Animals",
         "description": "Piglets of Japanese boars(uribous) are racing for the prize of sweet potato!",
-        "_animal": "Japanese Boar"
+        "_animal": "Japanese Boar",
+        "timeOfDay": "1:00 PM"
     },
     {
         "name": "Fruits Picking Time",
         "zone": "Mountain Animals",
         "description": "Our red pandas are ready to pick fruits. Will they ask you to feed them?",
-        "_animal": "Red Panda"
+        "_animal": "Red Panda",
+        "timeOfDay": "3:00 PM"
     },
     {
         "name": "Dive Into Platypus School",
         "zone": "Aquatic Animals",
         "description": "How much do you know about this shy and nocturnal animal? Let's learn how platypus lives.",
-        "_animal": "Platypus"
+        "_animal": "Platypus",
+        "timeOfDay": "10:00 AM"
     },
     {
         "name": "I am the strongest!",
         "zone": "Aquatic Animals",
         "description": "The heaviest of its kind, emperor penguins are now playing Sumo wrestling to decide the strongest.",
-        "_animal": "Emperor Penguin"
+        "_animal": "Emperor Penguin",
+        "timeOfDay": "1:00 PM"
     },
     {
         "name": "It's a Small World in the Sea",
         "zone": "Aquatic Animals",
         "description": "Have a peak in a minituare stage for the smallest seahorses.",
-        "_animal": "Pygmy Seahorse"
+        "_animal": "Pygmy Seahorse",
+        "timeOfDay": "3:30 PM"
     },
     {
         "name": "Cold Blooded Hunting Show",
         "zone": "Animals in Cold Region",
         "description": "Beautiful but ruthless snow leopard. Let's see how they catch today's dinner.",
-        "_animal": "Snow Leopard"
+        "_animal": "Snow Leopard",
+        "timeOfDay": "11:30 AM"
     },
     {
         "name": "Philosopher's Sketch",
         "zone": "Animals in Cold Region",
         "description": "Come and look at this furry dog's mind expression in one stroke sketch.",
-        "_animal": "Akita Inu"
+        "_animal": "Akita Inu",
+        "timeOfDay": "2:00 PM"
     },
     {
         "name": "Treasure Hunt in the White World",
         "zone": "Animals in Cold Region",
         "description": "Snowy owls are so good at hunting. Come and see to find out more about thier nature.",
-        "_animal": "Snowy Owl"
+        "_animal": "Snowy Owl",
+        "timeOfDay": "3:30 PM"
     }
 ]

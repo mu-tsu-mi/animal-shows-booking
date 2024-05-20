@@ -5,6 +5,7 @@ const showSchema = new Schema({
     name: String,
     zone: String,
     description: String,
+    timeOfDay: String,
     animal: {
       type: Schema.Types.ObjectId,
       ref: 'Animal'
