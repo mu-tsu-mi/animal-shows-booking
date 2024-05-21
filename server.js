@@ -11,7 +11,8 @@ require('./db/database');
 require('./config/passport');
 
 var indexRouter = require('./routes/index');
-const zonesRouter = require('./routes/zones')
+const zonesRouter = require('./routes/zones');
+const animalsRouter = require('./routes/animals');
 const showsRouter = require('./routes/shows');
 const bookingsRouter = require('./routes/bookings');
 
@@ -40,8 +41,9 @@ app.use(function(req, res, next) {
 })
 
 app.use('/', indexRouter);
-app.use('/zones', zonesRouter)
-app.use('/zones/:zone/:name', showsRouter);
+app.use('/zones', zonesRouter);
+app.use('/animals', animalsRouter);
+app.use('/shows', showsRouter);
 app.use('/bookings', bookingsRouter)
 
 // catch 404 and forward to error handler

@@ -2,7 +2,7 @@
     <h1><%= zone %></h1>
     <div>
         <% animals.forEach(function(a){ %>
-            <div><a href="<%=`/zones/${zone}/${a.name}`%>">
+            <div><a href="<%=`/animals/${a._id}`%>">
                 <%= a.name %>
             </a></div>
         <% }) %>

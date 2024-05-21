@@ -8,12 +8,10 @@ module.exports = {
 }
 
 async function showBookings(req, res) {
-    const bookings = await Booking.find({ user: req.user }).populate({
-        path: 'animalShow',
-        populate: {
-            path:'animal'
-        }
-    }).exec();
+    const bookings = await Booking
+        .find({ user: req.user })
+        .populate('animalShow')
+        .exec();
     res.render('bookings/index', { bookings })
 }
 

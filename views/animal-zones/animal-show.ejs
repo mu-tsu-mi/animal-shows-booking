@@ -21,7 +21,7 @@
             <div>No Booking made yet</div>
         <% } %>
         <h3>Book this show</h3>
-        <form action="/zones/<%= show.zone %>/<%= show.animal.name %>/<%= show.name %>" method="POST">
+        <form action="/shows/<%= show._id %> %>" method="POST">
             <div>
             <label>Pick a show date
                 <input type="date" name="showDate" required>

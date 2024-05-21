@@ -3,7 +3,7 @@ const Show = require('../models/show')
 
 module.exports = {
     show,
-    showDetail
+    // showDetail
 }
 
 async function show(req, res) {
@@ -14,12 +14,12 @@ async function show(req, res) {
     res.render('./animal-zones/zone', { animals, zone })
 }
 
-async function showDetail(req, res) {
-    const name = req.params.name
-    const zone = req.params.zone
-    // console.log(req.params)
-    const animal = await Animal.findOne({ name }).exec();
+// async function showDetail(req, res) {
+//     const name = req.params.name
+//     const zone = req.params.zone
+//     // console.log(req.params)
+//     const animal = await Animal.findOne({ name }).exec();
 
-    const shows = await Show.find({ 'animal': animal._id }).exec();
-    res.render('./animal-zones/animal', { animal, shows, zone })
-}
+//     const shows = await Show.find({ 'animal': animal._id }).exec();
+//     res.render('./animal-zones/animal', { animal, shows, zone })
+// }

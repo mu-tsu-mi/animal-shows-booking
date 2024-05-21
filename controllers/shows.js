@@ -7,23 +7,23 @@ module.exports = {
 }
 
 async function showAnimalShow(req, res) {
-    const animalShow = req.params.animalShowName
-    const show = await Show.findOne({ name: animalShow}).populate('animal').exec();
+    const id = req.params.id
+    const show = await Show.findById(id).exec();
     const bookings = await Booking.find({ animalShow: show, user: req.user})
     res.render('./animal-zones/animal-show', { show, bookings })
 }
 
 async function bookAnimalShow(req, res) {
-    const animalShow = req.params.animalShowName
-    const show = await Show.findOne({ name: animalShow}).populate('animal').exec();
-    try {
+    const id = req.params.id
+    const show = await Show.findById(id).exec();
+    try {       
         const newBooking = req.body
         newBooking.animalShow = show
         newBooking.user = req.user
         await Booking.create(newBooking)
-        res.redirect(`/zones/${show.zone}/${show.animal.name}/${show.name}`)
+        res.redirect(`/shows/${show._id}`)
     } catch(err) {
         console.log(err)
-        res.redirect(`/zones/${show.zone}/${show.animal.name}/${show.name}`, { errorMsg: err.message })
+        res.redirect(`/shows/${show._id}`, { errorMsg: err.message })
     }
 }

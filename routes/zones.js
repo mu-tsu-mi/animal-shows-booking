@@ -10,7 +10,4 @@ router.get('/', function(req, res, next) {
 // each zone
 router.get('/:zone',animalZoneCtrl.show)
 
-// each animal page
-router.get('/:zone/:name', animalZoneCtrl.showDetail)
-
 module.exports = router;
