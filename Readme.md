@@ -27,7 +27,7 @@ As a user, I want to see a list of zoo zones, those of which have a list of anim
 - [ ] Disable past dates booking
 - [ ] css
 - [ ] Add API
-- [ ] Restful routing
+- [X] Restful routing
 
 # Next Steps
 

@@ -1,5 +1,6 @@
 <%- include('../partials/header') %>
 <h1>Edit Your Booking Details</h1>
+<h3>Show Name: <%= booking.animalShow.name %></h3>
 <form action="/bookings/<%= booking._id %>/edit?_method=PUT" method="POST">
     <div>
     <label>Pick a show date
