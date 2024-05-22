@@ -21,6 +21,9 @@ async function bookAnimalShow(req, res) {
         const newBooking = req.body
         newBooking.animalShow = show
         newBooking.user = req.user
+        const dateAndTime = newBooking.showDate.toString().concat(' ', show.timeOfDay)
+        const dateCombined = new Date(dateAndTime)
+        newBooking.showDate = dateCombined
         await Booking.create(newBooking)
         res.redirect(`/shows/${show._id}`)
     } catch(err) {
