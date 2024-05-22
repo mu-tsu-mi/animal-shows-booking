@@ -21,15 +21,19 @@ As a user, I want to see a list of zoo zones, those of which have a list of anim
 - [X] Booking - Edit
 - [X] Booking - Delete
 - [X] Add animal images
-- [ ] Add user's booking details on landing page
+- [X] Add ensureloggedin
+- [X] Add 'My Bookings' for logged in users
 - [ ] Sort booking details by latest on top
 - [ ] Disable users not to book for the same show for the same day
 - [ ] Disable past dates booking
 - [ ] css
-- [ ] Add API
+
 - [X] Restful routing
+- [ ] Deploy the app
+- [ ] Add API
 
 # Next Steps
 
-- Future enhancement one...
+- Hide new booking form for already booked user
+- Add dark mode (view)
 - Future enhancement two... 
