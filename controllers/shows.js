@@ -10,6 +10,7 @@ async function showAnimalShow(req, res) {
     const id = req.params.id
     const show = await Show.findById(id).exec();
     const bookings = await Booking.find({ animalShow: show, user: req.user})
+        .sort({ showDate:'ascending' })
     res.render('./animal-zones/animal-show', { show, bookings })
 }
 

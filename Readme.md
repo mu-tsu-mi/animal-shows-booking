@@ -23,7 +23,7 @@ As a user, I want to see a list of zoo zones, those of which have a list of anim
 - [X] Add animal images
 - [X] Add ensureloggedin
 - [X] Add 'My Bookings' for logged in users
-- [ ] Sort booking details by latest on top
+- [X] Sort booking details in ascending order
 - [ ] Disable users not to book for the same show for the same day
 - [ ] Disable past dates booking
 - [X] css

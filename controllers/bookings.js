@@ -11,15 +11,16 @@ async function showBookings(req, res) {
     const bookings = await Booking
         .find({ user: req.user })
         .populate('animalShow')
+        .sort({ showDate:'ascending' })
         .exec();
     res.render('bookings/index', { bookings })
 }
 
 async function showBookingEdit(req, res) {
     const booking = await Booking
-    .findById(req.params.id)
-    .populate('animalShow')
-    .exec();
+        .findById(req.params.id)
+        .populate('animalShow')
+        .exec();
     res.render('bookings/edit', { booking })
 }
 
