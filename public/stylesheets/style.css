@@ -37,10 +37,13 @@ nav {
   margin: 1rem;
   border-radius: 1.5rem;
   background-color: #739072;
-  color: white;
+  /* color: white; */
   text-align: center;
   font-weight: 700;
   width: 30rem;
+}
+.zone > a, .animal > a {
+  text-decoration: none;
 }
 .animal-container {
   display: flex;
@@ -63,4 +66,24 @@ nav {
   max-width: 20rem;
   padding: 0.5rem;
   margin: 0.5rem;
+}
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+#entry {
+  box-sizing: border-box;
+  background-color: #3A4D39;
+  padding: 2rem;
+  border: 1.5rem;
+  border-color: #4F6F52;
+  text-align: center;
+  border-radius: 1.5rem;
+  max-width: 20rem;
+  font-weight: 700;
+}
+#entry > a {
+  color: white;
+  text-decoration: none;
 }
