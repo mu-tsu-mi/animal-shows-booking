@@ -24,7 +24,7 @@ As a user, I want to see a list of zoo zones, those of which have a list of anim
 - [X] Add ensureloggedin
 - [X] Add 'My Bookings' for logged in users
 - [X] Sort booking details in ascending order
-- [ ] Show bookings past dates and future dates sections
+- [X] Show bookings past dates and future dates sections
 - [ ] Disable users not to book for the same show for the same day
 - [ ] Disable past dates booking
 - [X] css

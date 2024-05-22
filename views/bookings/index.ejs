@@ -1,41 +1,73 @@
 <%- include('../partials/header') %>
 <h1>Your Booking Details</h1>
 <h4>Each of our animal shows are held daily. Please understand that animals need to rest well to give the best performance in each show.</h4>
-<div class="booking-container">
 <% if(bookings.length > 0) { %>
+    <h2>Upcoming Bookings</h2>
+    <div class="booking-container">
     <% bookings.forEach(function(b, index) { %>
-        <div class="bookings">
-        <div>Booking <%= index + 1 %></div>
-        <div>
-            Show Name: 
-            <a href="/shows/<%= b.animalShow._id %> %>"><%= b.animalShow.name %></a>
-        </div>
-        <div>
-            Show Date: 
-            <%= b.showDate.toLocaleDateString('en-au') %>
-        </div>
-        <div>
-            Show Time:
-            <%= b.animalShow.timeOfDay %>
-        </div>
-        <div>
-            Number of Adults: 
-            <%= b.numberOfAdults %>
-        </div>
-        <div>
-            Number of Children: 
-            <%= b.numberOfChildren %>
-        </div>
-        <div>
-            <button type="submit">
-                <a href="/bookings/<%= b._id %>/edit">Change details</a>
-            </button>
-        </div>
-        <form action="/bookings/<%= b._id %>?_method=DELETE" method="POST">
-            <button type="submit">Delete</button>
-        </form>
-        </div>
+        <% if(b.showDate >= new Date()) { %> 
+            <div class="bookings">
+            <div>
+                Show Name: 
+                <a href="/shows/<%= b.animalShow._id %> %>"><%= b.animalShow.name %></a>
+            </div>
+            <div>
+                Show Date: 
+                <%= b.showDate.toLocaleDateString('en-au') %>
+            </div>
+            <div>
+                Show Time:
+                <%= b.animalShow.timeOfDay %>
+            </div>
+            <div>
+                Number of Adults: 
+                <%= b.numberOfAdults %>
+            </div>
+            <div>
+                Number of Children: 
+                <%= b.numberOfChildren %>
+            </div>
+            <div>
+                <button type="submit">
+                    <a href="/bookings/<%= b._id %>/edit">Change details</a>
+                </button>
+            </div>
+            <form action="/bookings/<%= b._id %>?_method=DELETE" method="POST">
+                <button type="submit">Delete</button>
+            </form>
+            </div>
+        <% } %>
     <% }) %>
+    </div>
+
+    <h2>Past Bookings</h2>
+    <div class="booking-container">
+    <% bookings.forEach(function(b, index) { %>
+        <% if(b.showDate < new Date()) { %> 
+            <div class="bookings">
+            <div>
+                Show Name: 
+                <a href="/shows/<%= b.animalShow._id %> %>"><%= b.animalShow.name %></a>
+            </div>
+            <div>
+                Show Date: 
+                <%= b.showDate.toLocaleDateString('en-au') %>
+            </div>
+            <div>
+                Show Time:
+                <%= b.animalShow.timeOfDay %>
+            </div>
+            <div>
+                Number of Adults: 
+                <%= b.numberOfAdults %>
+            </div>
+            <div>
+                Number of Children: 
+                <%= b.numberOfChildren %>
+            </div>
+            </div>
+        <% } %>
+    <% }) %>
+    </div>
 <% } %>
-</div>
 <%- include('../partials/footer') %>
