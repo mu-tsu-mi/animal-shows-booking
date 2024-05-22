@@ -1,11 +1,12 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: cornflowerblue;
+  font: 1rem "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: whitesmoke;
+  color: #4F6F52;
 }
 
 a {
-  color: #0051ff;
+  color: #3A4D39;
 }
 
 .login {
@@ -19,4 +20,47 @@ a {
 nav {
   display: flex;
   justify-content: space-between;
+}
+.zones {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+}
+.animals {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+ 
+}
+.zone, .animal {
+  padding: 5rem;
+  margin: 1rem;
+  border-radius: 1.5rem;
+  background-color: #739072;
+  color: white;
+  text-align: center;
+  font-weight: 700;
+  width: 30rem;
+}
+.animal-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.animal-content {
+  max-width: 50rem;
+  min-width: 15rem;
+}
+.booking-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  margin: 1rem;
+  
+}
+.bookings {
+  justify-content: space-between;
+  max-width: 20rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
 }

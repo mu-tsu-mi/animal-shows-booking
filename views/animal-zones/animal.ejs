@@ -1,17 +1,18 @@
 <%- include('../partials/header') %>
+<div class="animal-container">
+<div class="animal-content">    
     <h1><%= animal.name %></h1>
     <img src="<%= `/images/animals/${animal.name}.png` %>"/>
-   
     <div>
         <% if(shows.length > 0) { %>
         <% shows.forEach(function(show){ %>
             <div id="show-name"><p>We are on this show. Click below for show details and booking: </p>
-                <a href="<%=`/shows/${show._id}`%>"><%= show.name %></a> 
+            <a href="<%=`/shows/${show._id}`%>"><%= show.name %></a> 
             </div>
         <% }) %>
         <% } %>
     </div>
-    
-    
+</div>  
+</div>    
     
 <%- include('../partials/footer') %>

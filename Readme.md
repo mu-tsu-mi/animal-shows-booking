@@ -26,7 +26,7 @@ As a user, I want to see a list of zoo zones, those of which have a list of anim
 - [ ] Sort booking details by latest on top
 - [ ] Disable users not to book for the same show for the same day
 - [ ] Disable past dates booking
-- [ ] css
+- [X] css
 
 - [X] Restful routing
 - [ ] Deploy the app
