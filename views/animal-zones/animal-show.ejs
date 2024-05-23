@@ -6,10 +6,10 @@
         This show is on <%= show.timeOfDay %> everyday.
     </div>
     <% if(user) { %>
-        <h3>Your Booking Details: </h3>
-        <% if(bookings.length > 0) { %>
+        <h3>Your Future Booking Details: </h3>
+        <% if(futureBookings.length > 0) { %>
         <div>    
-        <% bookings.forEach(function(b) { %>
+        <% futureBookings.forEach(function(b) { %>
             <div>
             Date: <%= b.showDate.toLocaleDateString('en-au') %>
             Adults: <%= b.numberOfAdults %>

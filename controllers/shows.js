@@ -9,9 +9,16 @@ module.exports = {
 async function showAnimalShow(req, res) {
     const id = req.params.id
     const show = await Show.findById(id).exec();
-    const bookings = await Booking.find({ animalShow: show, user: req.user})
+    const today = new Date();
+    const allBookings = await Booking.find({ animalShow: show, user: req.user})
         .sort({ showDate:'ascending' })
-    res.render('./animal-zones/animal-show', { errorMsg: "", show, bookings })
+    const futureBookings = []
+    allBookings.forEach((b) => {
+        if(b.showDate > today) {
+            futureBookings.push(b)
+        } return futureBookings
+    })
+    res.render('./animal-zones/animal-show', { errorMsg: "", show, futureBookings })
 }
 
 async function bookAnimalShow(req, res) {
