@@ -21,6 +21,9 @@
             <div>No Booking made yet</div>
         <% } %>
         <h3>Book this show</h3>
+        <% if(errorMsg) { %>
+            <div class="error"><%= errorMsg %></div>
+        <% } %>
         <form action="/shows/<%= show._id %> %>" method="POST">
             <div>
             <label>Pick a show date

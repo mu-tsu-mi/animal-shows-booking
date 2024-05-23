@@ -11,19 +11,29 @@ async function showAnimalShow(req, res) {
     const show = await Show.findById(id).exec();
     const bookings = await Booking.find({ animalShow: show, user: req.user})
         .sort({ showDate:'ascending' })
-    res.render('./animal-zones/animal-show', { show, bookings })
+    res.render('./animal-zones/animal-show', { errorMsg: "", show, bookings })
 }
 
 async function bookAnimalShow(req, res) {
     const id = req.params.id
     const show = await Show.findById(id).exec();
+
+    const newBooking = req.body
+    newBooking.animalShow = show
+    newBooking.user = req.user
+    const dateAndTime = newBooking.showDate.toString().concat(' ', show.timeOfDay)
+    const dateCombined = new Date(dateAndTime)
+    newBooking.showDate = dateCombined
+    const today = new Date()
+
+    if(dateCombined.toISOString() < today.toISOString()) {
+        const bookings = await Booking.find({ animalShow: show, user: req.user})
+        .sort({ showDate:'ascending' })
+        res.render('./animal-zones/animal-show', { errorMsg: "Invalid date. Please book for future date.", show, bookings })
+        return
+    }
+
     try {       
-        const newBooking = req.body
-        newBooking.animalShow = show
-        newBooking.user = req.user
-        const dateAndTime = newBooking.showDate.toString().concat(' ', show.timeOfDay)
-        const dateCombined = new Date(dateAndTime)
-        newBooking.showDate = dateCombined
         await Booking.create(newBooking)
         res.redirect(`/shows/${show._id}`)
     } catch(err) {
