@@ -25,8 +25,10 @@ async function showBookingEdit(req, res) {
 }
 
 async function saveBookingChange(req, res) {
-    console.log("edit details: ", req.body)
-    const booking = await Booking.findById(req.params.id).populate('animalShow').exec();
+    const booking = await Booking
+        .findById(req.params.id)
+        .populate('animalShow')
+        .exec();
     
     booking.numberOfAdults = req.body.numberOfAdults
     booking.numberOfChildren = req.body.numberOfChildren
@@ -41,6 +43,26 @@ async function saveBookingChange(req, res) {
         return
     }
 
+    const startOfDay = new Date(dateAndTime)
+    startOfDay.setHours(0, 0, 0, 0)
+    const endOfDay = new Date(dateAndTime)
+    endOfDay.setHours(23, 59, 59, 999)
+
+    const existingBooking = await Booking.findOne({
+        animalShow: booking.animalShow,
+        user: req.user, 
+        showDate: {
+            $gte: startOfDay,
+            $lt: endOfDay
+        }
+    })
+    .exec();
+    
+    if(existingBooking) {
+        res.render('./bookings/edit', { errorMsg: "You already booked for the date. Please book for a different date.", booking })
+        return
+    }
+
     try { 
         await booking.save()
         res.redirect('/bookings')
@@ -51,6 +73,11 @@ async function saveBookingChange(req, res) {
 }
 
 async function deleteBooking(req, res) {
-    await Booking.deleteOne({ _id: req.params.id })
-    res.redirect('/bookings')
+    try {
+        await Booking.deleteOne({ _id: req.params.id })
+        res.redirect('/bookings')
+    } catch(err) {
+        console.log(err)
+        res.redirect('/bookings', { errorMsg: err.message })
+    }
 }
