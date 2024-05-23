@@ -33,18 +33,37 @@ async function bookAnimalShow(req, res) {
     const dateCombined = new Date(dateAndTime)
     newBooking.showDate = dateCombined
     const today = new Date()
+    const futureBookings = await Booking
+    .find({
+        animalShow: show,
+        user: req.user, 
+        showDate: {$gte: today}
+    })
+    .sort({ showDate:'ascending' })
+    .exec();
 
     if(dateCombined.toISOString() < today.toISOString()) {
-        const futureBookings = await Booking
-        .find({
-            animalShow: show,
-            user: req.user, 
-            showDate: {$gte: today}
-        })
-        .sort({ showDate:'ascending' })
-        .exec();
-    
         res.render('./animal-zones/animal-show', { errorMsg: "Invalid date. Please book for future date.", show, futureBookings })
+        return
+    }
+    
+    const startOfDay = new Date(dateAndTime)
+    startOfDay.setHours(0, 0, 0, 0)
+    const endOfDay = new Date(dateAndTime)
+    endOfDay.setHours(23, 59, 59, 999)
+
+    const existingBooking = await Booking.findOne({
+        animalShow: show,
+        user: req.user, 
+        showDate: {
+            $gte: startOfDay,
+            $lt: endOfDay
+        }
+    })
+    .exec();
+    
+    if(existingBooking) {
+        res.render('./animal-zones/animal-show', { errorMsg: "You already booked for the date. Please book for a different date.", show, futureBookings })
         return
     }
 
