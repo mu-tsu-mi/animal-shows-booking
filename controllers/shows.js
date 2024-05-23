@@ -10,14 +10,15 @@ async function showAnimalShow(req, res) {
     const id = req.params.id
     const show = await Show.findById(id).exec();
     const today = new Date();
-    const allBookings = await Booking.find({ animalShow: show, user: req.user})
+    const futureBookings = await Booking
+        .find({
+            animalShow: show,
+            user: req.user, 
+            showDate: {$gte: today}
+        })
         .sort({ showDate:'ascending' })
-    const futureBookings = []
-    allBookings.forEach((b) => {
-        if(b.showDate > today) {
-            futureBookings.push(b)
-        } return futureBookings
-    })
+        .exec();
+
     res.render('./animal-zones/animal-show', { errorMsg: "", show, futureBookings })
 }
 
@@ -34,9 +35,16 @@ async function bookAnimalShow(req, res) {
     const today = new Date()
 
     if(dateCombined.toISOString() < today.toISOString()) {
-        const bookings = await Booking.find({ animalShow: show, user: req.user})
+        const futureBookings = await Booking
+        .find({
+            animalShow: show,
+            user: req.user, 
+            showDate: {$gte: today}
+        })
         .sort({ showDate:'ascending' })
-        res.render('./animal-zones/animal-show', { errorMsg: "Invalid date. Please book for future date.", show, bookings })
+        .exec();
+    
+        res.render('./animal-zones/animal-show', { errorMsg: "Invalid date. Please book for future date.", show, futureBookings })
         return
     }
 
