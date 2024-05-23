@@ -2,7 +2,14 @@ body {
   padding: 50px;
   font: 1rem "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: whitesmoke;
-  color: #4F6F52;
+  color: var(--main-text-colour);
+}
+
+:root {
+  --main-panel-colour: #739072;
+  --main-text-colour: #4F6F52;
+  --light-bg: #ECE3CE;
+  --dark-bg: #3A4D39;
 }
 
 a {
@@ -36,7 +43,7 @@ nav {
   padding: 5rem;
   margin: 1rem;
   border-radius: 1.5rem;
-  background-color: #739072;
+  background-color: var(--main-panel-colour);
   text-align: center;
   font-weight: 700;
   width: 30rem;
@@ -67,8 +74,8 @@ nav {
   width: 20rem;
   padding: 0.5rem;
   margin: 0.5rem;
-  border: 1px solid #739072;
-  background-color: #ECE3CE;
+  border: 1px solid var(--main-panel-colour);
+  background-color: var(--light-bg);
   border-radius: 1rem;
 }
 .home-container {
@@ -78,10 +85,10 @@ nav {
 }
 #entry {
   box-sizing: border-box;
-  background-color: #3A4D39;
+  background-color: var(--dark-bg);
   padding: 2rem;
   border: 1.5rem;
-  border-color: #4F6F52;
+  border-color: var(--main-text-colour);
   text-align: center;
   border-radius: 1.5rem;
   max-width: 20rem;

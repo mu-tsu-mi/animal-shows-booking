@@ -14,7 +14,7 @@ As a user, I want to see a list of zoo zones, those of which have a list of anim
 # Getting Started
 - [X] Wireframe and Trello board
 - [X] Create schemas
-- [W] Zones (tiles)
+- [X] Zones (tiles)
 - [X] Lists of animal shows (tiles)
 - [X] Add authentication feature
 - [X] Booking - Create /Individual animal page
@@ -25,8 +25,8 @@ As a user, I want to see a list of zoo zones, those of which have a list of anim
 - [X] Add 'My Bookings' for logged in users
 - [X] Sort booking details in ascending order
 - [X] Show bookings past dates and future dates sections
-- [ ] Disable users not to book for the same show for the same day
-- [ ] Disable past dates booking
+- [X] Disable users not to book for the same show for the same day
+- [X] Disable past dates booking
 - [X] css
 
 - [X] Restful routing
