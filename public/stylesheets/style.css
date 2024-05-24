@@ -50,6 +50,7 @@ nav {
 }
 .zone > a, .animal > a {
   text-decoration: none;
+  color: var(--light-bg);
 }
 .animal-container {
   display: flex;
@@ -83,6 +84,19 @@ nav {
   justify-content: center;
   align-content: center;
 }
+.home-contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+.weather {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 0.3rem;
+}
+
 #entry {
   box-sizing: border-box;
   background-color: var(--dark-bg);
