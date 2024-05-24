@@ -4,12 +4,13 @@
         <h1><%= title %></h1>
         <p>Welcome to <%= title %></p>
         <div id="entry"><a href="/zones">Enter the Wonderland!</a></div>
-        <div>Weather in the Wonderland
+        <div class="weather-fcst">
+            <h4>Weather in the Wonderland</h4>
             <% days.forEach(function(day, index){ %>
                 <div class="weather">
                     <span class="day"><%= day %></span>
-                    <span class="min-temp">Low <%= minTemp[index] %></span>
-                    <span class="max-temp">High <%= maxTemp[index] %></span>
+                    <span class="min-temp">Low <%= minTemp[index] %>&deg;C</span>
+                    <span class="max-temp">High <%= maxTemp[index] %>&deg;C</span>
                 </div>
             <% }) %>
         </div>

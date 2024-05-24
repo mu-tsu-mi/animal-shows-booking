@@ -1,6 +1,6 @@
 # Animal Shows Booking
 A booking app for animal shows. 
-As a user, I want to see a list of zoo zones, those of which have a list of animals and a list of animal. When I go to an individual animal's page, I want to create a booking for an animal show by selecting a date and # of visitors (adults and children). I also want to edit/update my booking and cancel. My bookings should be in decending order so that I can see the latest date at the top. On each animal's page, I want to see information about the animal(API). 
+As a user, I want to see a list of zoo zones, those of which have a list of animals. When I go to an individual animal show page, I want to create a booking for an animal show by selecting a date and # of visitors (adults and children). I also want to edit/update my booking and cancel/delete. My bookings should be in ascending order so that I can see the latest date at the top.  
 
 # Technologies Used
 
@@ -31,12 +31,10 @@ As a user, I want to see a list of zoo zones, those of which have a list of anim
 
 - [X] Restful routing
 - [W] Deploy the app
-- [ ] Add API
+- [X] Add API
 
 # Next Steps
-
-- Hide new booking form for already booked user
+- Move weather forecast in nav instead of landing page
 - Add more animals
 - Add animal facts in seed.js
-- Add dark mode (view)
-- Future enhancement two... 
+- Add dark mode (view) 

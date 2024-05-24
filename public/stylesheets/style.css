@@ -68,7 +68,6 @@ nav {
   flex-wrap: wrap;
   justify-content: left;
   margin: 1rem;
-  
 }
 .bookings {
   justify-content: space-between;
@@ -82,30 +81,41 @@ nav {
 .home-container {
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
 }
 .home-contents {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
+  align-items: center;
 }
 .weather {
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
   padding: 0.3rem;
+}
+.weather-fcst {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+}
+.day, .min-temp, .max-temp {
+  padding: 0 0.5rem;
+}
+.day {
+  font-weight: bold;
 }
 
 #entry {
   box-sizing: border-box;
   background-color: var(--dark-bg);
-  padding: 2rem;
+  padding: 3rem;
   border: 1.5rem;
   border-color: var(--main-text-colour);
   text-align: center;
   border-radius: 1.5rem;
-  max-width: 20rem;
   font-weight: 700;
 }
 #entry > a {
