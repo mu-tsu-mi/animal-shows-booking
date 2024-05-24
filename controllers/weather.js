@@ -7,10 +7,10 @@ module.exports = {
 }
 
 async function showIndex(req, res) {
-    // const url = `${WEATHER_URL}?apikey=${token}`
+    // const url = `${WEATHER_URL}?metric=true&apikey=${token}`
     // const weatherResponse = await fetch(url)
     // const weather = await weatherResponse.json()
-    // console.log(weather["DailyForecasts"])
+    //console.log(weather["DailyForecasts"])
 
     const dailyFcst = weather["DailyForecasts"]
     const days = dailyFcst.map((day) => {
