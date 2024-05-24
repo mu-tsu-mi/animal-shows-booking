@@ -1,11 +1,11 @@
 var express = require('express');
 var router = express.Router();
 const passport = require('passport');
+const indexCtrl = require('../controllers/weather')
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Animal\'s Wonderland' });
-});
+router.get('/', indexCtrl.showIndex);
+
 // Google OAuth login route
 router.get('/auth/google',passport.authenticate(
   'google',

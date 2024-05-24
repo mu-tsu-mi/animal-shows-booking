@@ -4,6 +4,15 @@
         <h1><%= title %></h1>
         <p>Welcome to <%= title %></p>
         <div id="entry"><a href="/zones">Enter the Wonderland!</a></div>
+        <div>Weather in the Wonderland
+            <% days.forEach(function(day, index){ %>
+                <div class="weather">
+                    <span class="day"><%= day %></span>
+                    <span class="min-temp">Low <%= minTemp[index] %></span>
+                    <span class="max-temp">High <%= maxTemp[index] %></span>
+                </div>
+            <% }) %>
+        </div>
     </div>
 </div>
 <%- include('./partials/footer') %>

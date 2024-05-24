@@ -36,5 +36,7 @@ As a user, I want to see a list of zoo zones, those of which have a list of anim
 # Next Steps
 
 - Hide new booking form for already booked user
+- Add more animals
+- Add animal facts in seed.js
 - Add dark mode (view)
 - Future enhancement two... 
