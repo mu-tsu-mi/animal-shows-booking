@@ -10,7 +10,7 @@ async function showIndex(req, res) {
     // const url = `${WEATHER_URL}?metric=true&apikey=${token}`
     // const weatherResponse = await fetch(url)
     // const weather = await weatherResponse.json()
-    //console.log(weather["DailyForecasts"])
+    // console.log(weather)
 
     const dailyFcst = weather["DailyForecasts"]
     const days = dailyFcst.map((day) => {
@@ -20,6 +20,9 @@ async function showIndex(req, res) {
         })
     })
 
+    const weatherDescription = dailyFcst.map((day) => {
+        return day["Day"]["IconPhrase"]
+    })
     const minTemp = dailyFcst.map((day) => {
         return day["Temperature"]["Minimum"]["Value"]
     })
@@ -27,5 +30,5 @@ async function showIndex(req, res) {
         return day["Temperature"]["Maximum"]["Value"]
     })
     
-    res.render('index', { title: 'Animal\'s Wonderland', days, minTemp, maxTemp });
+    res.render('index', { title: 'Animal\'s Wonderland', days, minTemp, maxTemp, weatherDescription });
 }

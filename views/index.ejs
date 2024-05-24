@@ -9,6 +9,7 @@
             <% days.forEach(function(day, index){ %>
                 <div class="weather">
                     <span class="day"><%= day %></span>
+                    <span class="weather-desc"><%= weatherDescription[index] %></span>
                     <span class="min-temp">Low <%= minTemp[index] %>&deg;C</span>
                     <span class="max-temp">High <%= maxTemp[index] %>&deg;C</span>
                 </div>
