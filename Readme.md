@@ -1,17 +1,18 @@
 # Animal Shows Booking
 A booking app for animal shows. 
-As a user, I want to see a list of zoo zones, those of which have a list of animals. When I go to an individual animal show page, I want to create a booking for an animal show by selecting a date and # of visitors (adults and children). I also want to edit/update my booking and cancel/delete. My bookings should be in ascending order so that I can see the latest date at the top.  
+As a user, I want to see a list of zoo zones, those of which have a list of animals. When I go to an individual animal show page, I want to create a booking for an animal show by selecting a date and # of visitors (adults and children). I also want to edit/update my booking and cancel/delete. My bookings should be in ascending order so that I can see the latest date at the top. I should not be able to book for past dates in create booking on animal show page and my bookings edit page. On animal show booking page, I should not see past bookings, but I should see all booking history on My Booking page. I would like to see weather forecast as it helps me decide which date to book.
 
 # URL
 https://animal-shows-booking.onrender.com
 
 # App image
-./photos-read-me/landing-page.png
-![alt text](photos-read-me/landing-page.png)
+![Landing page image](photos-read-me/landing-page.png)
 
 # Wireframe
+![Wireframe image](photos-read-me/wireframe-animal-shows-booking.png)
 
 # Entity relationship diagram
+![Entity Relationship Diagram image](photos-read-me/ERD.png)
 
 # Technologies Used
 - JavaScript
@@ -45,6 +46,39 @@ https://animal-shows-booking.onrender.com
 # Next Steps
 - Show weather icon (sunny, etc)
 - Move weather forecast in nav instead of landing page
+- Save weather forecast in MongoDB
 - Add more animals
 - Add animal facts in seed.js
-- Add dark mode (view) 
+- Add # of visitors validation in controller (Minimum One adult per booking and maximum 5 adults and 5 children)
+- Add dark mode (view)
+- Add Zoo admin feature for the zoo to manage bookings
+
+# Presentation script
+I made a show booking app for an imaginary zoo, Animal’s wonderland. The app has features of showing zoo zones, animals by zone, animal shows, in addition to creating, editing and deleting animal shows. To be user centric, I added booking function in animal show page. The app also has “My Booking” page.
+I added weather forecast using weather API on landing page. I chose AccuWeather that has daily maximum calls of 50. I added json file for weather data in order not to exceed this daily limit as a temporary solution.
+
+< Log in + Show CRUD operations : Japanese Boar >
+Booking feature is only available to logged-in users. So, when you go to animal show page without logging in, a message appears asking users to log in. On an animal show page, you see only future bookings and the app does not allow users to book for past dates and displays a message to ask users to re-select a date. I set maximum number of visitors five adults, five children and there must be one adult in a booking.
+
+< Demonstrate past date booking attempt > 
+< Move to My Bookings >
+For updating and deleting bookings, I made My Booking section. Your booking details are shown by upcoming ones and past ones, both are shown by date order (ascending). You can also move to each animal show page from here. On booking editing page, you can not select past dates as well. To delete your booking, simply click on Delete. 
+  
+< Mongoose model: Display ERD then vs code >
+I have three schemas in addition to User schema. My main model is Booking. Animal and Show models support the booking model. Booking schema references Show and User. Show schema references Animal. 
+
+< Show booking routes then bookings controller and shows controller >
+My CRUD operations are in bookings and shows. < Move to bookings controller >
+
+< Challenges >
+I think handling dates is the most challenging part of this project. I did not have to worry about time component before I added separating future bookings and past bookings, also disabling users not to book for past dates. However, in order to add these validations, I had to combine date from user input (i.e. calendar YYYY MM DD) and time from ‘time of day’ in Show schema. 
+< Show shows controller - bookAnimalShow function >
+To prevent double booking, I needed to compare date in an existing booking in Mongo DB, so the date is in ISO format, and the date from user input so that I needed to add time component like this. <  bookAnimalShow function >
+I also needed to check for double booking so I added validation like this too. < Show existingBooking function in shows controller > From this, I learnt how to filter my query from mongoose using ‘grater than or equal to ($gte)’ and less than (‘&lt’).
+
+< Show my favourite EJS template >
+
+I saved animal images in the public - images directory. Photos are named exactly the same as in Mongo DB so that I did not need to save paths in the DB.
+ 
+< Key learning > < Show the screenshot >
+I learnt the importance of RESTful route in a painful way. At first I made my app “/zones/each zone/each animal/each animal show”. This made my CRUD operations quite difficult, not being able to use _id info in mongoDB. Then, I finally realised that I should have done /animals/:id, /shows/:id. I had to update routes and controllers then ejs. Only after that, I was able to use findById and this saved my tears.
