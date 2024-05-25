@@ -54,7 +54,8 @@ https://animal-shows-booking.onrender.com
 - Add Zoo admin feature for the zoo to manage bookings
 
 # Presentation script
-I made a show booking app for an imaginary zoo, Animal’s wonderland. The app has features of showing zoo zones, animals by zone, animal shows, in addition to creating, editing and deleting animal shows. To be user centric, I added booking function in animal show page. The app also has “My Booking” page.
+I made a show booking app for an imaginary zoo, Animal’s wonderland. The app has features of showing zoo zones, animals by zone, animal shows, in addition to creating, editing and deleting bookings. To be user centric, I added booking function in animal show page. The app also has “My Booking” page. 
+I used seed json files to load animals and animal shows information as well.
 I added weather forecast using weather API on landing page. I chose AccuWeather that has daily maximum calls of 50. I added json file for weather data in order not to exceed this daily limit as a temporary solution.
 
 < Log in + Show CRUD operations : Japanese Boar >
