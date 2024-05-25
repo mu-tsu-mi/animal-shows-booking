@@ -59,7 +59,9 @@ I used seed json files to load animals and animal shows information as well.
 I added weather forecast using weather API on landing page. I chose AccuWeather that has daily maximum calls of 50. I added json file for weather data in order not to exceed this daily limit as a temporary solution.
 
 < Log in + Show CRUD operations : Japanese Boar >
-Booking feature is only available to logged-in users. So, when you go to animal show page without logging in, a message appears asking users to log in. On an animal show page, you see only future bookings and the app does not allow users to book for past dates and displays a message to ask users to re-select a date. I set maximum number of visitors five adults, five children and there must be one adult in a booking.
+While working on this project, CRUD operation also meant my daily routine of Cry - Recoil - Upset - Devastate. 
+Booking feature is only available to logged-in users. So, when you go to animal show page without logging in, a message appears asking users to log in. 
+On an animal show page, you see only future bookings and the app does not allow users to book for past dates and displays a message to ask users to re-select a date. I set maximum number of visitors five adults, five children and there must be one adult in a booking.
 
 < Demonstrate past date booking attempt > 
 < Move to My Bookings >
@@ -69,17 +71,26 @@ For updating and deleting bookings, I made My Booking section. Your booking deta
 I have three schemas in addition to User schema. My main model is Booking. Animal and Show models support the booking model. Booking schema references Show and User. Show schema references Animal. 
 
 < Show booking routes then bookings controller and shows controller >
-My CRUD operations are in bookings and shows. < Move to bookings controller >
+My CRUD operations are in bookings and shows. < Move to bookings then *shows *controller >
 
 < Challenges >
-I think handling dates is the most challenging part of this project. I did not have to worry about time component before I added separating future bookings and past bookings, also disabling users not to book for past dates. However, in order to add these validations, I had to combine date from user input (i.e. calendar YYYY MM DD) and time from ‘time of day’ in Show schema. 
-< Show shows controller - bookAnimalShow function >
-To prevent double booking, I needed to compare date in an existing booking in Mongo DB, so the date is in ISO format, and the date from user input so that I needed to add time component like this. <  bookAnimalShow function >
-I also needed to check for double booking so I added validation like this too. < Show existingBooking function in shows controller > From this, I learnt how to filter my query from mongoose using ‘grater than or equal to ($gte)’ and less than (‘&lt’).
+I think handling dates is the most challenging part of this project. I did not have to worry about time component before I added separating future bookings and past bookings, 
+< Show “My Bookings” page >
+ and disabling users not to book for past dates. 
+
+< Back to vs code - shows controllers - bookAnimalShow function >
+However, in order to add these validations, I had to combine date from user input (i.e. calendar YYYY MM DD) and time from ‘time of day’ in Show schema. 
+< Show shows controller - bookAnimalShow function - if statement >
+To prevent double booking, I needed to compare date in an existing booking in Mongo DB, so the date is in ISO format, and the date from user input (date component only ) so that I needed to add time component like this. 
+< Show bookAnimalShow function - “const dateAndTime, dateCombined >
+
+I also needed to check for double booking so I added validation like this too. 
+< Show existingBooking variable in shows controller > From this, I learnt how to filter my query from mongoose using ‘grater than or equal to ($gte)’ and less than (‘&lt’).
 
 < Show my favourite EJS template >
-
-I saved animal images in the public - images directory. Photos are named exactly the same as in Mongo DB so that I did not need to save paths in the DB.
+< Show Pigmy Hippo page >
+My favourite EJS template is animal show page as I think it is user-friendly. Although it is less developer-friendly,  users don’t have to go to booking dedicated page in this way,. 
+By the way, I saved animal images in the public - images directory. Photos are named exactly the same as in Animal Schema so that I did not need to save paths in the DB ( instead of doing this: Storing Images locally and Saving Paths in the Database)
  
 < Key learning > < Show the screenshot >
-I learnt the importance of RESTful route in a painful way. At first I made my app “/zones/each zone/each animal/each animal show”. This made my CRUD operations quite difficult, not being able to use _id info in mongoDB. Then, I finally realised that I should have done /animals/:id, /shows/:id. I had to update routes and controllers then ejs. Only after that, I was able to use findById and this saved my tears.
+I learnt the importance of RESTful route in a painful way. At first I made my app “/zones/each zone/each animal/each animal show”. This made my CRUD operations difficult, not being able to use _id info in mongoDB. Then, I finally realised that I should have done /animals/:id, /shows/:id. I had to update routes and controllers then ejs. Only after that, I was able to use findById and this saved my tears (although I cried a lot before then).
