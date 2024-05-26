@@ -11,7 +11,6 @@ async function showIndex(req, res) {
     // const weatherResponse = await fetch(url)
     // const weather = await weatherResponse.json()
     // console.log(weather)
-    console.log("testing")
 
     const dailyFcst = weather["DailyForecasts"]
     const days = dailyFcst.map((day) => {

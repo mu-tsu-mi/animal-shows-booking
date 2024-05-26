@@ -1,4 +1,6 @@
 body {
+  box-sizing: border-box;
+  height: 100vh;
   padding: 50px;
   font: 1rem "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: whitesmoke;
@@ -28,6 +30,14 @@ nav {
   display: flex;
   justify-content: space-between;
 }
+.zones-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 1rem 0;
+ }
+
 .zones {
   display: flex;
   justify-content: space-around;
@@ -46,7 +56,7 @@ nav {
   background-color: var(--main-panel-colour);
   text-align: center;
   font-weight: 700;
-  width: 30rem;
+  width: 30%;
 }
 .zone > a, .animal > a {
   text-decoration: none;
