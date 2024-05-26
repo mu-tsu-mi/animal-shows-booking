@@ -58,7 +58,7 @@ nav {
   font-weight: 700;
   width: 30%;
 }
-.zone > a, .animal > a {
+a.zone, a.animal {
   text-decoration: none;
   color: var(--light-bg);
 }

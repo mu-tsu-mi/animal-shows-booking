@@ -2,10 +2,9 @@
     <h1><%= zone %></h1>
     <div class="animals">
         <% animals.forEach(function(a){ %>
-            <div class="animal">
-                <a href="<%=`/animals/${a._id}`%>">
-                <%= a.name %></a>
-            </div>
+            <a class="animal" href="<%=`/animals/${a._id}`%>">
+                <%= a.name %>
+            </a>
         <% }) %>
     </div>    
 <%- include('../partials/footer') %>
